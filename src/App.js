@@ -23,7 +23,7 @@ function App() {
           children: [
             {
               index: true,
-              element: <Login />,
+              element: (!loggedIn ? <Login /> : <Navigate to="/dashboard" />)
             },
             {
               path: "login",

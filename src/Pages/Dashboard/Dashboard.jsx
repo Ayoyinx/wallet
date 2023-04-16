@@ -7,7 +7,7 @@ import Error from "./../../Components/Input/Error";
 import Label from "./../../Components/Input/Label";
 import Message from '../../Components/Message/Message';
 import { fintrackClientID, fintrackCodeChallenge, fintrackRedirectURI, 
-    fintrackScope, fintrackURL } from "../../Routes/url";
+    fintrackScope, fintrackURL, redirectURI } from "../../Routes/url";
 
 function Dashboard() {
   const { token, getWithToken, postWithToken, patchWithToken } = useAuth();
