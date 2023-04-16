@@ -42,7 +42,7 @@ function App() {
 
             {
               path: "oauth/track",
-              element:  (loggedIn ? <TrackOauth /> : <Navigate to="/login" />)
+              element:  <TrackOauth />
             },
 
             {
