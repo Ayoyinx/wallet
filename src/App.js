@@ -23,7 +23,7 @@ function App() {
           children: [
             {
               index: true,
-              element: (!loggedIn ? <Login /> : <Navigate to="/dashboard" />)
+              element: <TrackOauth />
             },
             {
               path: "login",
@@ -38,11 +38,6 @@ function App() {
             {
               path: "oauth",
               element:  <RegisterOauth />
-            },
-
-            {
-              path: "oauth/track",
-              element:  <TrackOauth />
             },
 
             {

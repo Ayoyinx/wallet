@@ -32,7 +32,7 @@ const redirectURI = `${webURL}/oauth`;
 const fintrackURL = "http://fianancetracker-env.eba-zzxqpwbf.us-east-1.elasticbeanstalk.com";
 const fintrackClientID = "CPih2sVVZDFBdQIbnxrPFmWvILHanGDJX7XU2gGG";
 const fintrackCodeChallenge = "-wxSlA-gYqGqqCQ_EIOhb-UdH4gKpZzB__DMz6Yu7ms";
-const fintrackRedirectURI = `${webURL}/oauth/track`;
+const fintrackRedirectURI = `${webURL}/`;
 const fintrackScope = "add-transaction";
 
 export { baseURL, PATHS, clientID, bookHubClientID, bookHubCodeChallange, 
