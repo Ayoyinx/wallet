@@ -235,7 +235,7 @@ function Register() {
                                   flex items-center shadow-md gap-6 w-max"
                                   disabled={status === "loading"}>
                                 <img src={googleLogo} className="h-6 w-6 transition-transform" alt="Google logo" />
-                                <span className="">Register with Google</span>
+                                <span className="">Register with FastWallet</span>
                               </button>
 
                               <button onClick={() => {
