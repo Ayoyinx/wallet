@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate, Navigate, redirect } from "react-router-dom";
 import { useTrans } from "./../../Context/TransContext/TransContext";
 import Spinner from "./../../Components/Spinner/Spinner";
 import { useAuth } from "./../../Context/AuthContext/AuthContext";
@@ -8,7 +8,7 @@ import { PATHS } from "./../../Routes/url";
 function TrackOauth() {
     const { trans } = useTrans();
     const navigate = useRef(useNavigate());
-    const { postWithToken, token } = useAuth();
+    const { postWithToken, token, loggedIn } = useAuth();
     const [loading, setLoading] = useState(true);
     
     const postWithRef = useRef(postWithToken);
@@ -58,6 +58,11 @@ function TrackOauth() {
                     setLoading(() => false);
                 }
             }
+        } else {
+            if (loggedIn) {
+                return redirect("/dashboard");
+            }
+            return redirect("/login");
         }
         return () => {
             ignore = true;
